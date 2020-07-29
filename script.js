@@ -81,7 +81,6 @@ console.log(findSubmissionByName(submissions, "Jack"));
 // 7. ○ Parameter(s): array
 // ○ Functionality: return the object in the -array- that has the lowest score. Use the
 // forEach method to loop through the whole array.
-
 const findLowestScore = (array) => {
   let lowestScore = array[0];
   array.forEach((submission) => {
@@ -92,15 +91,36 @@ const findLowestScore = (array) => {
   return lowestScore;
 };
 
-// "here is where to check the item youre on is lower than the lowest score"
-
 // 8. ○ Parameter(s): array
 // ○ Functionality: return the average quiz score. Use a for...of loop.
 
-// const findAveragetScore = (array) => {};
+const findAveragetScore = (array) => {
+  let sum = 0;
+  for (let averageScore of array) {
+    sum += averageScore.score;
+  }
+  return sum / array.length;
+};
+console.log(findAverageScore(submissions));
 
 // 9. ○ Parameter(s): array
 // ○ Functionality: return a new array using the filter method. The filter method
 // should find objects in the -array- that have passing scores.
+const filterPassing = (array) => {
+  let passingScores = array.filter((passing) => {
+    return passing.passingScores >= 60;
+  });
+  return passingScores;
+};
 
-// const filterPassing = (array) => {};
+console.log(filterPassing(submissions));
+
+// 10.
+
+// const filter90AndAbove = (array) => {
+//   let scoresGreaterThan90 = array.filter((scores) => {
+//     return scores.score >= 90;
+//   });
+//   return scoresGreaterThan90;
+// };
+// console.log(filter90AndAbove(submissions));
