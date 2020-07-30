@@ -26,7 +26,7 @@ let submissions = [
     passed: true,
   },
 ];
-// submissions[0]
+console.log(submissions);
 // 2.
 const addSubmission = (array, newName, newScore, newDate) => {
   let newSubmission = {
@@ -37,7 +37,7 @@ const addSubmission = (array, newName, newScore, newDate) => {
   };
   array.push(newSubmission);
 };
-// addSubmission(submissions, "Rachel", 80, "2020-01-25");
+addSubmission(submissions, "Rachel", 80, "2020-01-25");
 
 // 3. Functionality: remove the object from the array at the specified index using
 // the splice method
@@ -90,7 +90,7 @@ const findLowestScore = (array) => {
   });
   return lowestScore;
 };
-
+console.log(findLowestScore(array));
 // 8. ○ Parameter(s): array
 // ○ Functionality: return the average quiz score. Use a for...of loop.
 
@@ -114,13 +114,3 @@ const filterPassing = (array) => {
 };
 
 console.log(filterPassing(submissions));
-
-// 10.
-
-// const filter90AndAbove = (array) => {
-//   let scoresGreaterThan90 = array.filter((scores) => {
-//     return scores.score >= 90;
-//   });
-//   return scoresGreaterThan90;
-// };
-// console.log(filter90AndAbove(submissions));
